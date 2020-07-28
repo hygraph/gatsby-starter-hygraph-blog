@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "gatsby-starter-graphcms-blog",
+  "author": "Jonathan Steele <jonathan@steele.pro> (https://steele.pro)",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "dev": "gatsby develop"
+  },
+  "dependencies": {
+    "gatsby": "2.24.11",
+    "gatsby-source-graphcms": "2.0.0-next.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
