@@ -2,6 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   plugins: [
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-graphcms',
       options: {
