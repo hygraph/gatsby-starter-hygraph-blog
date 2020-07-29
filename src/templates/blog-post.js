@@ -1,6 +1,8 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-function BlogPostTemplate({ pageContext: { post } }) {
+function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
   return (
     <article>
       <header className="pt-6 xl:pb-10">
@@ -20,8 +22,51 @@ function BlogPostTemplate({ pageContext: { post } }) {
           </div>
         </div>
       </header>
+      <div className="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:col-gap-6 pb-16 xl:pb-20">
+        <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200">
+          <dt className="sr-only">Author</dt>
+          <dd>
+            <ul className="flex justify-center xl:block space-x-8 sm:space-x-12 xl:space-x-0 xl:space-y-8">
+              <li className="flex items-center space-x-2">
+                <Img
+                  fluid={authorImage.localFile.childImageSharp.fluid}
+                  className="w-10 h-10 rounded-full"
+                  fadeIn={false}
+                />
+                <dl className="text-sm font-medium leading-5 whitespace-no-wrap">
+                  <dt className="sr-only">Name</dt>
+                  <dd className="text-gray-900">{post.author.name}</dd>
+                </dl>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
     </article>
   )
 }
+
+export const pageQuery = graphql`
+  fragment AssetFields on GraphCMS_Asset {
+    id
+    localFile {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+
+  query BlogPostQuery($id: String!) {
+    authorImage: graphCmsAsset(
+      authorAvatar: {
+        elemMatch: { posts: { elemMatch: { id: { in: [$id] } } } }
+      }
+    ) {
+      ...AssetFields
+    }
+  }
+`
 
 export default BlogPostTemplate

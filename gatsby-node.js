@@ -7,6 +7,10 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         posts: allGraphCmsPost {
           nodes {
             id
+            author {
+              id
+              name
+            }
             content {
               markdown
             }
@@ -26,6 +30,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     createPage({
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
+        id: post.id,
         post,
       },
       path: `/posts/${post.slug}`,
