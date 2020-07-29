@@ -7,7 +7,10 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         posts: allGraphCmsPost {
           nodes {
             id
-            date
+            content {
+              markdown
+            }
+            date: formattedDate
             excerpt
             slug
             title
@@ -28,4 +31,26 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/posts/${post.slug}`,
     })
   })
+}
+
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    GraphCMS_Post: {
+      formattedDate: {
+        type: 'String',
+        resolve: (source) => {
+          const date = new Date(source.date)
+
+          return new Intl.DateTimeFormat('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          }).format(date)
+        },
+      },
+    },
+  }
+
+  createResolvers(resolvers)
 }
