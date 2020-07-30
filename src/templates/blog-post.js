@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
   return (
@@ -41,6 +43,15 @@ function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
             </ul>
           </dd>
         </dl>
+        <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
+          <div className="prose max-w-none pt-10 pb-8">
+            <MDXProvider>
+              <MDXRenderer>
+                {post.content.markdownNode.childMdx.body}
+              </MDXRenderer>
+            </MDXProvider>
+          </div>
+        </div>
       </div>
     </article>
   )
