@@ -6164,10 +6164,10 @@ gatsby-source-filesystem@2.3.18:
     valid-url "^1.0.9"
     xstate "^4.11.0"
 
-gatsby-source-graphcms@2.0.0-next.2:
-  version "2.0.0-next.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-graphcms/-/gatsby-source-graphcms-2.0.0-next.2.tgz#624e7bb35d37b8a0c635ee6a98addc39081c03dd"
-  integrity sha512-GEVw5ZV3rzCDBNTiwerW1qvVqJLkMHScuMIRiY7Lc8NoA/ln2uTM6XFoZSEzsmVSYZ055+OZxT13CRfgtvyg6Q==
+gatsby-source-graphcms@2.0.0-next.3:
+  version "2.0.0-next.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-graphcms/-/gatsby-source-graphcms-2.0.0-next.3.tgz#e291ba7059761ecdf267db2c7dae710eb1bdb452"
+  integrity sha512-x202ad54iC7/EZZNmaNvoZkFdGDB2gjJrT3n80Gc9zsN1fm9CKZ3fYxI3K9zWlwLnCRDPxxhnAMjLGbFf/kP8w==
   dependencies:
     gatsby-graphql-source-toolkit "0.2.2"
     gatsby-source-filesystem "2.3.18"
