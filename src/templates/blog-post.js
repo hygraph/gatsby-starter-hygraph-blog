@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
   return (
     <article>
-      <header className="pt-6 xl:pb-10">
+      <header className="pt-6 lg:pb-10">
         <div className="space-y-1 text-center">
           <dl className="space-y-10">
             <div>
@@ -24,11 +24,11 @@ function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
           </div>
         </div>
       </header>
-      <div className="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:col-gap-6 pb-16 xl:pb-20">
-        <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200">
+      <div className="divide-y lg:divide-y-0 divide-gray-200 lg:grid lg:grid-cols-4 lg:col-gap-6 pb-16 lg:pb-20">
+        <dl className="pt-6 pb-10 lg:pt-11 lg:border-b lg:border-gray-200">
           <dt className="sr-only">Author</dt>
           <dd>
-            <ul className="flex justify-center xl:block space-x-8 sm:space-x-12 xl:space-x-0 xl:space-y-8">
+            <ul className="flex justify-center lg:block space-x-8 sm:space-x-12 lg:space-x-0 lg:space-y-8">
               <li className="flex items-center space-x-2">
                 <Img
                   fluid={authorImage.localFile.childImageSharp.fluid}
@@ -43,7 +43,7 @@ function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
             </ul>
           </dd>
         </dl>
-        <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
+        <div className="divide-y divide-gray-200 lg:pb-0 lg:col-span-3 lg:row-span-2">
           <div className="prose max-w-none pt-10 pb-8">
             <MDXProvider>
               <MDXRenderer>
