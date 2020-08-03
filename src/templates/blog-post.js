@@ -4,7 +4,10 @@ import Img from 'gatsby-image'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
+function BlogPostTemplate({
+  data: { authorImage, coverImage },
+  pageContext: { post },
+}) {
   return (
     <article>
       <header className="pt-6 lg:pb-10">
@@ -44,6 +47,11 @@ function BlogPostTemplate({ data: { authorImage }, pageContext: { post } }) {
           </dd>
         </dl>
         <div className="divide-y divide-gray-200 lg:pb-0 lg:col-span-3 lg:row-span-2">
+          <Img
+            fluid={coverImage.localFile.childImageSharp.fluid}
+            className="mb-8 rounded"
+            fadeIn={false}
+          />
           <div className="prose max-w-none pt-10 pb-8">
             <MDXProvider>
               <MDXRenderer>
@@ -74,6 +82,11 @@ export const pageQuery = graphql`
       authorAvatar: {
         elemMatch: { posts: { elemMatch: { id: { in: [$id] } } } }
       }
+    ) {
+      ...AssetFields
+    }
+    coverImage: graphCmsAsset(
+      coverImagePost: { elemMatch: { id: { eq: $id } } }
     ) {
       ...AssetFields
     }
