@@ -5,23 +5,33 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     `
       {
         posts: allGraphCmsPost {
-          nodes {
-            id
-            author {
-              id
-              name
+          edges {
+            nextPost: next {
+              slug
+              title
             }
-            content {
-              markdownNode {
-                childMdx {
-                  body
+            post: node {
+              id
+              author {
+                id
+                name
+              }
+              content {
+                markdownNode {
+                  childMdx {
+                    body
+                  }
                 }
               }
+              date: formattedDate
+              excerpt
+              slug
+              title
             }
-            date: formattedDate
-            excerpt
-            slug
-            title
+            previousPost: previous {
+              slug
+              title
+            }
           }
         }
       }
@@ -30,12 +40,14 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   if (data.errors) throw data.errors
 
-  data.posts.nodes.forEach((post) => {
+  data.posts.edges.forEach(({ nextPost, post, previousPost }) => {
     createPage({
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
         id: post.id,
         post,
+        previousPost,
+        nextPost,
       },
       path: `/posts/${post.slug}`,
     })

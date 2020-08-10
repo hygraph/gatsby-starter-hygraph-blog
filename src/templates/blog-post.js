@@ -1,12 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 function BlogPostTemplate({
   data: { authorImage, coverImage },
-  pageContext: { post },
+  pageContext: { nextPost, post, previousPost },
 }) {
   return (
     <article>
@@ -27,7 +27,10 @@ function BlogPostTemplate({
           </div>
         </div>
       </header>
-      <div className="divide-y lg:divide-y-0 divide-gray-200 lg:grid lg:grid-cols-4 lg:col-gap-6 pb-16 lg:pb-20">
+      <div
+        className="divide-y lg:divide-y-0 divide-gray-200 lg:grid lg:grid-cols-4 lg:col-gap-6 pb-16 lg:pb-20"
+        style={{ gridTemplateRows: 'auto 1fr' }}
+      >
         <dl className="pt-6 pb-10 lg:pt-11 lg:border-b lg:border-gray-200">
           <dt className="sr-only">Author</dt>
           <dd>
@@ -60,6 +63,39 @@ function BlogPostTemplate({
             </MDXProvider>
           </div>
         </div>
+        <footer className="text-sm font-medium leading-5 divide-y divide-gray-200 lg:col-start-1 lg:row-start-2">
+          {(nextPost || previousPost) && (
+            <div className="space-y-8 py-8">
+              {nextPost && (
+                <div>
+                  <h2 className="text-xs tracking-wide uppercase text-gray-500">
+                    Next Post
+                  </h2>
+                  <div className="text-purple-500 hover:text-purple-600">
+                    <Link to={`/posts/${nextPost.slug}`}>{nextPost.title}</Link>
+                  </div>
+                </div>
+              )}
+              {previousPost && (
+                <div>
+                  <h2 className="text-xs tracking-wide uppercase text-gray-500">
+                    Previous Post
+                  </h2>
+                  <div className="text-purple-500 hover:text-purple-600">
+                    <Link to={`/posts/${previousPost.slug}`}>
+                      {previousPost.title}
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+          <div className="pt-8">
+            <Link to="/" className="text-purple-500 hover:text-purple-600">
+              &larr; Back to the blog
+            </Link>
+          </div>
+        </footer>
       </div>
     </article>
   )
