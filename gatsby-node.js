@@ -4,7 +4,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const { data } = await graphql(
     `
       {
-        posts: allGraphCmsPost {
+        posts: allGraphCmsPost(sort: { fields: date, order: ASC }) {
           edges {
             nextPost: next {
               slug
