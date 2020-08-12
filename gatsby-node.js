@@ -24,7 +24,13 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                 }
               }
               date: formattedDate
-              excerpt
+              excerpt {
+                markdownNode {
+                  childMdx {
+                    body
+                  }
+                }
+              }
               slug
               title
             }
