@@ -16,7 +16,7 @@
     "gatsby-plugin-mdx": "1.2.30",
     "gatsby-plugin-postcss": "2.3.11",
     "gatsby-plugin-sharp": "2.6.23",
-    "gatsby-source-graphcms": "2.0.0-next.3",
+    "gatsby-source-graphcms": "2.0.0-next.5",
     "gatsby-transformer-sharp": "2.5.11",
     "react": "16.13.1",
     "react-dom": "16.13.1"
