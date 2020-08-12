@@ -48,7 +48,7 @@ function IndexPage({ data: { allGraphCmsPost } }) {
 
 export const indexPageQuery = graphql`
   {
-    allGraphCmsPost {
+    allGraphCmsPost(sort: { fields: date, order: DESC }) {
       nodes {
         id
         date: formattedDate
