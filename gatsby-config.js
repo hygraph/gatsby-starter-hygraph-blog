@@ -3,6 +3,14 @@ require('dotenv').config()
 module.exports = {
   plugins: [
     'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      ptions: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-postcss',
     {
