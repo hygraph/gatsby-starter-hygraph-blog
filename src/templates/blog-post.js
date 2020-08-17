@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 function BlogPostTemplate({
@@ -56,11 +55,7 @@ function BlogPostTemplate({
             fadeIn={false}
           />
           <div className="prose max-w-none pt-10 pb-8">
-            <MDXProvider>
-              <MDXRenderer>
-                {post.content.markdownNode.childMdx.body}
-              </MDXRenderer>
-            </MDXProvider>
+            <MDXRenderer>{post.content.markdownNode.childMdx.body}</MDXRenderer>
           </div>
         </div>
         <footer className="text-sm font-medium leading-5 divide-y divide-gray-200 lg:col-start-1 lg:row-start-2">
