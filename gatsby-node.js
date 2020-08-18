@@ -16,6 +16,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             }
             seo {
               description
+              image {
+                url
+              }
               keywords
               title
             }
@@ -53,6 +56,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
               }
               seo {
                 description
+                image {
+                  url
+                }
                 keywords
                 title
               }

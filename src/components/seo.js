@@ -30,6 +30,7 @@ function SEO({ title, seo }) {
         name="description"
         content={seo?.description || defaultDescription}
       />
+      {seo?.image && <meta property="image" content={seo.image.url} />}
     </Helmet>
   )
 }
