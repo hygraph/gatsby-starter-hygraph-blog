@@ -5,6 +5,7 @@ module.exports = {
     title: 'GraphCMS Blog',
     description:
       'Gatsby blog starter for GraphCMS! Powered by `gatsby-source-graphcms`, featuring `gatsby-image` and MDX!',
+    keywords: 'Headless CMS, GraphCMS, GraphQL CMS, Gatsby',
   },
   plugins: [
     'gatsby-plugin-mdx',

@@ -10,14 +10,16 @@ function SEO({ title, seo }) {
       site {
         siteMetadata {
           description
+          keywords
           title
         }
       }
     }
   `)
 
-  const defaultTitle = siteMetadata.title
   const defaultDescription = siteMetadata.description
+  const defaultKeywords = siteMetadata.keywords
+  const defaultTitle = siteMetadata.title
 
   return (
     <Helmet
@@ -30,6 +32,7 @@ function SEO({ title, seo }) {
         name="description"
         content={seo?.description || defaultDescription}
       />
+      <meta name="keywords" content={seo?.keywords || defaultKeywords} />
       {seo?.image && <meta property="image" content={seo.image.url} />}
     </Helmet>
   )
