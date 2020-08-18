@@ -4,6 +4,21 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const { data } = await graphql(
     `
       {
+        pages: allGraphCmsPage {
+          nodes {
+            id
+            content {
+              markdownNode {
+                childMdx {
+                  body
+                }
+              }
+            }
+            slug
+            subtitle
+            title
+          }
+        }
         posts: allGraphCmsPost(sort: { fields: date, order: ASC }) {
           edges {
             nextPost: next {
@@ -56,6 +71,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         nextPost,
       },
       path: `/posts/${post.slug}`,
+    })
+  })
+
+  data.pages.nodes.forEach((page) => {
+    createPage({
+      component: path.resolve('./src/templates/default-page.js'),
+      context: {
+        page,
+      },
+      path: `/${page.slug}`,
     })
   })
 }
