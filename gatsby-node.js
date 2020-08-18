@@ -25,7 +25,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
               slug
               title
             }
-            post: node {
+            page: node {
               id
               author {
                 id
@@ -61,16 +61,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   if (data.errors) throw data.errors
 
-  data.posts.edges.forEach(({ nextPost, post, previousPost }) => {
+  data.posts.edges.forEach(({ nextPost, page, previousPost }) => {
     createPage({
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
-        id: post.id,
-        post,
+        id: page.id,
+        page,
         previousPost,
         nextPost,
       },
-      path: `/posts/${post.slug}`,
+      path: `/posts/${page.slug}`,
     })
   })
 
