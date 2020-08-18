@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { useLocation } from '@reach/router'
+import { globalHistory, useLocation } from '@reach/router'
 import cx from 'classnames'
 
 import GraphCMSLogo from '../svg/logo.svg'
@@ -21,6 +21,14 @@ function Header() {
       }
     }
   `)
+
+  useEffect(
+    () =>
+      globalHistory.listen(({ action }) => {
+        if (action === 'PUSH') setMobileNavOpen(false)
+      }),
+    [setMobileNavOpen]
+  )
 
   const toggleMobileNavOpen = () => setMobileNavOpen((open) => !open)
 
