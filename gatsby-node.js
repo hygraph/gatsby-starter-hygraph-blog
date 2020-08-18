@@ -14,6 +14,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                 }
               }
             }
+            seo {
+              description
+              keywords
+              title
+            }
             slug
             subtitle
             title
@@ -45,6 +50,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                     body
                   }
                 }
+              }
+              seo {
+                description
+                keywords
+                title
               }
               slug
               title
