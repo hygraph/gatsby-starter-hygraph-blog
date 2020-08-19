@@ -40,3 +40,4 @@ yarn dev
 
 - Use [`gatsby-image`](https://www.gatsbyjs.org/packages/gatsby-image) with your GraphCMS image assets.
 - MDX support via [`gatsby-plugin-mdx`](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx) on GraphCMS `RichText` fields.
+- Built with [Tailwind CSS](https://tailwindcss.com/).
