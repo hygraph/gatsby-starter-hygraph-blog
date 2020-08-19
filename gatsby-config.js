@@ -1,6 +1,12 @@
 require('dotenv').config()
 
 module.exports = {
+  siteMetadata: {
+    title: 'GraphCMS Blog',
+    description:
+      'Gatsby blog starter for GraphCMS! Powered by `gatsby-source-graphcms`, featuring `gatsby-image` and MDX!',
+    keywords: 'Headless CMS, GraphCMS, GraphQL CMS, Gatsby',
+  },
   plugins: [
     'gatsby-plugin-mdx',
     {
@@ -11,6 +17,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-postcss',
     {

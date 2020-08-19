@@ -1,15 +1,11 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
-import Header from './src/components/header'
-
 import './src/styles/index.css'
+import Layout from './src/components/layout'
 
-const wrapPageElement = ({ element }) => (
-  <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-5xl">
-    <Header />
-    <main>{element}</main>
-  </div>
+const wrapPageElement = ({ element, props }) => (
+  <Layout {...props}>{element}</Layout>
 )
 
 const wrapRootElement = ({ element }) => <MDXProvider>{element}</MDXProvider>
