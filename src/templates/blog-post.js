@@ -49,11 +49,13 @@ function BlogPostTemplate({
           </dd>
         </dl>
         <div className="divide-y divide-gray-200 lg:pb-0 lg:col-span-3 lg:row-span-2">
-          <Img
-            fluid={coverImage.localFile.childImageSharp.fluid}
-            className="mb-8 rounded"
-            fadeIn={false}
-          />
+          {coverImage && (
+            <Img
+              fluid={coverImage.localFile.childImageSharp.fluid}
+              className="mb-8 rounded"
+              fadeIn={false}
+            />
+          )}
           <div className="prose max-w-none pt-10 pb-8">
             <MDXRenderer>{page.content.markdownNode.childMdx.body}</MDXRenderer>
           </div>
