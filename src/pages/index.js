@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 function IndexPage({ data: { allGraphCmsPost } }) {
   return (
@@ -36,9 +35,7 @@ function IndexPage({ data: { allGraphCmsPost } }) {
                       </Link>
                     </h2>
                     <div className="prose max-w-none text-gray-500">
-                      <MDXRenderer>
-                        {post.excerpt.markdownNode.childMdx.body}
-                      </MDXRenderer>
+                      {post.excerpt}
                     </div>
                   </div>
                   <div className="text-base leading-6 font-medium">
@@ -66,13 +63,7 @@ export const indexPageQuery = graphql`
       nodes {
         id
         date: formattedDate
-        excerpt {
-          markdownNode {
-            childMdx {
-              body
-            }
-          }
-        }
+        excerpt
         slug
         title
       }
