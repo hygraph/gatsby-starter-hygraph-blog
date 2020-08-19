@@ -14,7 +14,7 @@ gatsby new graphcms-blog https://github.com/GraphCMS/gatsby-starter-graphcms-blo
 
 2. **Provide your GraphCMS project keys**
 
-> In order to use this starter, you'll need to have created a new GraphCMS project using our `Blog Template`. You can learn more [here](#).
+> In order to use this starter, you'll need to have created a new GraphCMS project using our `Blog Template`.
 
 Navigate into your new site’s directory and copy the `.env.sample` file.
 
