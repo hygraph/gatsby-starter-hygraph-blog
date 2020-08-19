@@ -34,9 +34,11 @@ function IndexPage({ data: { allGraphCmsPost } }) {
                         {post.title}
                       </Link>
                     </h2>
-                    <div className="prose max-w-none text-gray-500">
-                      {post.excerpt}
-                    </div>
+                    {post.excerpt && (
+                      <div className="prose max-w-none text-gray-500">
+                        {post.excerpt}
+                      </div>
+                    )}
                   </div>
                   <div className="text-base leading-6 font-medium">
                     <Link
