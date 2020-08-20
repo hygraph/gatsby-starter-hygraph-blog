@@ -38,6 +38,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
               author {
                 id
                 name
+                title
               }
               content {
                 markdownNode {

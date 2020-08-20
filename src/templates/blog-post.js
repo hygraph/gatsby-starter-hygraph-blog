@@ -43,6 +43,12 @@ function BlogPostTemplate({
                 <dl className="text-sm font-medium leading-5 whitespace-no-wrap">
                   <dt className="sr-only">Name</dt>
                   <dd className="text-gray-900">{page.author.name}</dd>
+                  {page.author.title && (
+                    <React.Fragment>
+                      <dt className="sr-only">Title</dt>
+                      <dd className="text-gray-500">{page.author.title}</dd>
+                    </React.Fragment>
+                  )}
                 </dl>
               </li>
             </ul>
