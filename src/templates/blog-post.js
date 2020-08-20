@@ -34,15 +34,21 @@ function BlogPostTemplate({
           <dt className="sr-only">Author</dt>
           <dd>
             <ul className="flex justify-center lg:block space-x-8 sm:space-x-12 lg:space-x-0 lg:space-y-8">
-              <li className="flex items-center space-x-2">
+              <li className="flex space-x-2">
                 <Img
                   fluid={authorImage.localFile.childImageSharp.fluid}
                   className="w-10 h-10 rounded-full"
                   fadeIn={false}
                 />
-                <dl className="text-sm font-medium leading-5 whitespace-no-wrap">
+                <dl className="flex-1 text-sm font-medium leading-5">
                   <dt className="sr-only">Name</dt>
                   <dd className="text-gray-900">{page.author.name}</dd>
+                  {page.author.title && (
+                    <React.Fragment>
+                      <dt className="sr-only">Title</dt>
+                      <dd className="text-gray-500">{page.author.title}</dd>
+                    </React.Fragment>
+                  )}
                 </dl>
               </li>
             </ul>
