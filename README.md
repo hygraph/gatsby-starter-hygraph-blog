@@ -1,5 +1,3 @@
-![The official GraphCMS Gatsby Blog Starter](https://media.graphcms.com/DSUxl9oaTUqKJvPKFokx)
-
 # gatsby-starter-graphcms-blog
 
 > A [Gatsby](httsp://gatsbyjs.com) starter for creating a basic blog with [GraphCMS](https://graphcms.com)
