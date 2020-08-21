@@ -1,4 +1,4 @@
-![The official GraphCMS Gatsby Blog Starter](https://media.graphcms.com/FI8WGiTeR52BIh9MOrHu)
+![The official GraphCMS Gatsby Blog Starter](https://media.graphcms.com/DSUxl9oaTUqKJvPKFokx)
 
 # gatsby-starter-graphcms-blog
 
