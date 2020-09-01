@@ -2,7 +2,7 @@
   "private": true,
   "name": "gatsby-starter-graphcms-blog",
   "author": "Jonathan Steele <jonathan@steele.pro> (https://steele.pro)",
-  "license": "MIT",
+  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
