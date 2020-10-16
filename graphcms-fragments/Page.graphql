@@ -1,0 +1,24 @@
+fragment Page on Page {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  slug
+  subtitle
+  content {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+  seo {
+    ... on Seo {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+}

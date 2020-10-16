@@ -1,0 +1,27 @@
+fragment Seo on Seo {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  description
+  keywords
+  image {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+    }
+  }
+  remoteParent: parent {
+    ... on Post {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+    ... on Page {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+}

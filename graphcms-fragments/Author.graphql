@@ -1,0 +1,23 @@
+fragment Author on Author {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  name
+  picture {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+    }
+  }
+  title
+  biography
+  posts {
+    ... on Post {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+}
