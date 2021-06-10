@@ -7,11 +7,6 @@ import TwitterSVG from '../svg/twitter.svg'
 
 const socialLinks = [
   {
-    Component: GitHubSVG,
-    href: 'https://github.com/graphcms/gatsby-graphcms-ecommerce-starter',
-    title: 'GitHub',
-  },
-  {
     Component: SlackSVG,
     href: 'http://slack.graphcms.com',
     title: 'Slack',
