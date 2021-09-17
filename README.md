@@ -32,7 +32,10 @@ GRAPHCMS_TOKEN=""
 
 3. **Start building!**
 
+Install the dependencies and start the gatsby dev server:
+
 ```shell
+yarn
 yarn dev
 ```
 
