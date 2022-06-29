@@ -11,6 +11,24 @@ fragment Asset on Asset {
   width
   size
   mimeType
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
   coverImagePost {
     ... on Post {
       remoteTypeName: __typename
@@ -25,6 +43,12 @@ fragment Asset on Asset {
   }
   seoImage {
     ... on Seo {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  scheduledIn {
+    ... on ScheduledOperation {
       remoteTypeName: __typename
       remoteId: id
     }

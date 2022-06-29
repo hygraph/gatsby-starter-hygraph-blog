@@ -2,10 +2,10 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: 'GraphCMS Blog',
+    title: 'Hygraph Blog',
     description:
-      'Gatsby blog starter for GraphCMS! Powered by `gatsby-source-graphcms`, featuring `gatsby-image` and MDX!',
-    keywords: 'Headless CMS, GraphCMS, GraphQL CMS, Gatsby',
+      'Gatsby blog starter for Hygraph! Powered by `gatsby-source-hygraph`, featuring `gatsby-image` and MDX!',
+    keywords: 'Headless CMS, Hygraph, GraphQL CMS, Gatsby',
   },
   plugins: [
     'gatsby-plugin-mdx',
@@ -27,6 +27,7 @@ module.exports = {
         token: process.env.GRAPHCMS_TOKEN,
         buildMarkdownNodes: true,
         downloadLocalImages: true,
+        fragmentsPath: 'hygraph-fragments',
       },
     },
     'gatsby-transformer-sharp',

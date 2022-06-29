@@ -40,7 +40,7 @@ function SEO({ title, seo }) {
       {seo?.image && <meta property="og:image" content={seo.image.url} />}
       <meta name="og:type" content="website" />
 
-      <meta name="twitter:site" content="@GraphCMS" />
+      <meta name="twitter:site" content="@Hygraph" />
       <meta name="twitter:title" content={`${pageTitle} | ${defaultTitle}`} />
       <meta name="twitter:card" content="summary_large_image" />
       {seo?.image && <meta name="twitter:image:src" content={seo.image.url} />}

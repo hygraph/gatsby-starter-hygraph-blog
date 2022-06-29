@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "gatsby-starter-graphcms-blog",
+  "name": "gatsby-starter-hygraph-blog",
   "author": "Jonathan Steele <jonathan@steele.pro> (https://steele.pro)",
   "license": "0BSD",
   "scripts": {
