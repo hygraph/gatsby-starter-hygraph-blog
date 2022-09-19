@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphcms',
       options: {
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
-        token: process.env.GRAPHCMS_TOKEN,
+        endpoint: process.env.HYGRAPH_ENDPOINT,
+        token: process.env.HYGRAPH_TOKEN,
         buildMarkdownNodes: true,
         downloadLocalImages: true,
         fragmentsPath: 'hygraph-fragments',
