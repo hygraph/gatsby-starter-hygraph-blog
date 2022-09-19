@@ -8,7 +8,7 @@ import TwitterSVG from '../svg/twitter.svg'
 const socialLinks = [
   {
     Component: GitHubSVG,
-    href: 'https://github.com/hygraph/gatsby-hygraph-ecommerce-starter',
+    href: 'https://github.com/hygraph/gatsby-starter-hygraph-blog',
     title: 'GitHub',
   },
   {
