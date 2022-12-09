@@ -8,6 +8,9 @@
     "clean": "gatsby clean",
     "dev": "gatsby develop"
   },
+  "engines": {
+    "node": "~16"
+  },
   "dependencies": {
     "@mdx-js/mdx": "1.6.18",
     "@mdx-js/react": "1.6.18",
