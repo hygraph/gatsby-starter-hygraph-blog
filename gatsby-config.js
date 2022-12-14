@@ -11,7 +11,7 @@ module.exports = {
     'gatsby-plugin-mdx',
     {
       resolve: 'gatsby-plugin-react-svg',
-      ptions: {
+      options: {
         rule: {
           include: /svg/,
         },
@@ -28,6 +28,7 @@ module.exports = {
         buildMarkdownNodes: true,
         downloadLocalImages: true,
         fragmentsPath: 'hygraph-fragments',
+        queryConcurrency: 1
       },
     },
     'gatsby-transformer-sharp',
