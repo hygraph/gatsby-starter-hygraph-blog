@@ -4,8 +4,8 @@
 
 • [Demo](blog.withheadlesscms.com) • [`gatsby-source-graphcms`](https://github.com/Hygraph/gatsby-source-graphcms)
 
-[![Clone project](https://hygraph.com/button)](https://app.graphcms.com/clone/a1cd264ab6d3448d9b4d1e2cc2162620?name=Blog)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGraphCMS%2Fgatsby-starter-graphcms-blog&env=HYGRAPH_ENDPOINT,HYGRAPH_TOKEN&envDescription=GraphCMS%20API%20Endpoint%20and%20Token&envLink=https%3A%2F%2Fgithub.com%2FGraphCMS%2Fgatsby-starter-graphcms-blog%23quick-start&project-name=graphcms-blog&repo-name=graphcms-blog&demo-title=GraphCMS%20Blog&demo-description=Gatsby%20starter%20for%20creating%20a%20basic%20blog%20with%20GraphCMS&demo-url=https%3A%2F%2Fblog.withheadlesscms.com%2F&demo-image=https%3A%2F%2Frepository-images.githubusercontent.com%2F283171327%2F1dc64780-e3de-11ea-9661-8f89688dc13c)
+[![Clone project](https://hygraph.com/button)](https://app.hygraph.com/clone/a1cd264ab6d3448d9b4d1e2cc2162620?name=Blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhygraph%2Fgatsby-starter-hygraph-blog&env=HYGRAPH_ENDPOINT,HYGRAPH_TOKEN&envDescription=Hygraph%20API%20Endpoint%20and%20Token&demo-title=Hygraph%20Blog&demo-description=Gatsby%20starter%20for%20creating%20a%20basic%20blog%20with%20Hygraph&demo-url=https%3A%2F%2Fblog.withheadlesscms.com%2F)
 
 ## Quick start
 
