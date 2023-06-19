@@ -27,7 +27,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
-    "react-transition-group": "4.4.1"
+    "react-transition-group": "4.4.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.2.0",
