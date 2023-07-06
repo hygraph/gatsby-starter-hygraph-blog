@@ -21,7 +21,7 @@
     "gatsby-plugin-postcss": "2.3.13",
     "gatsby-plugin-react-helmet": "3.3.13",
     "gatsby-plugin-react-svg": "3.0.0",
-    "gatsby-plugin-sharp": "2.6.39",
+    "gatsby-plugin-sharp": "4.25.1",
     "gatsby-source-graphcms": "2.0.0-next.11",
     "gatsby-transformer-sharp": "2.5.17",
     "react": "16.13.1",
